@@ -1,0 +1,37 @@
+{
+  "cpojApp": {
+    "testCase": {
+      "home": {
+        "title": "Test Cases",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Test Case",
+        "createOrEditLabel": "Create or edit a Test Case",
+        "notFound": "No Test Cases found"
+      },
+      "created": "A new Test Case is created with identifier {{ param }}",
+      "updated": "A Test Case is updated with identifier {{ param }}",
+      "deleted": "A Test Case is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Test Case {{ id }}?"
+      },
+      "detail": {
+        "title": "Test Case"
+      },
+      "id": "ID",
+      "name": "Name",
+      "timeLimitInMS": "Time Limit In MS",
+      "memoryLimitInMB": "Memory Limit In MB",
+      "weightPercentage": "Weight Percentage",
+      "inputData": "Input Data",
+      "outputData": "Output Data",
+      "createdBy": "Created By",
+      "createdDate": "Created Date",
+      "lastModifiedBy": "Last Modified By",
+      "lastModifiedDate": "Last Modified Date",
+      "problem": "Problem",
+      "help": {
+        "weightPercentage": "If a submission passes this test case, it should get this weight percentage of the total points\nIf a submission passes all the test case of a problem, it should get 100% of the total points"
+      }
+    }
+  }
+}

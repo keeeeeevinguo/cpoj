@@ -1,0 +1,10 @@
+{
+  "cpojApp": {
+    "SubmissionResultStatus": {
+      "null": "",
+      "WAIT": "WAIT",
+      "JUDGING": "JUDGING",
+      "JUDGED": "JUDGED"
+    }
+  }
+}

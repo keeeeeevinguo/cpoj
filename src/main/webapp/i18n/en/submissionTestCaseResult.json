@@ -1,0 +1,32 @@
+{
+  "cpojApp": {
+    "submissionTestCaseResult": {
+      "home": {
+        "title": "Submission Test Case Results",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Submission Test Case Result",
+        "createOrEditLabel": "Create or edit a Submission Test Case Result",
+        "notFound": "No Submission Test Case Results found"
+      },
+      "created": "A new Submission Test Case Result is created with identifier {{ param }}",
+      "updated": "A Submission Test Case Result is updated with identifier {{ param }}",
+      "deleted": "A Submission Test Case Result is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Submission Test Case Result {{ id }}?"
+      },
+      "detail": {
+        "title": "Submission Test Case Result"
+      },
+      "id": "ID",
+      "name": "Name",
+      "resultMessage": "Result Message",
+      "resultMessageDetail": "Result Message Detail",
+      "elapsedTimeInMS": "Elapsed Time In MS",
+      "createdBy": "Created By",
+      "createdDate": "Created Date",
+      "lastModifiedBy": "Last Modified By",
+      "lastModifiedDate": "Last Modified Date",
+      "submission": "Submission"
+    }
+  }
+}

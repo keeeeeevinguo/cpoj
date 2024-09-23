@@ -1,0 +1,37 @@
+{
+  "cpojApp": {
+    "submission": {
+      "home": {
+        "title": "Submissions",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Submission",
+        "createOrEditLabel": "Créer ou éditer un Submission",
+        "notFound": "Aucun Submission trouvé"
+      },
+      "created": "Un nouveau Submission a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Submission avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Submission avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Submission {{ id }} ?"
+      },
+      "detail": {
+        "title": "Submission"
+      },
+      "id": "ID",
+      "name": "Name",
+      "programmingLanguage": "Programming Language",
+      "code": "Code",
+      "overallResultStatus": "Overall Result Status",
+      "overallResultMessage": "Overall Result Message",
+      "overallResultMessageDetail": "Overall Result Message Detail",
+      "overallResultTries": "Overall Result Tries",
+      "overallResultScorePercentage": "Overall Result Score Percentage",
+      "createdBy": "Created By",
+      "createdDate": "Created Date",
+      "lastModifiedBy": "Last Modified By",
+      "lastModifiedDate": "Last Modified Date",
+      "submissionTestCaseResult": "Submission Test Case Result",
+      "problem": "Problem"
+    }
+  }
+}

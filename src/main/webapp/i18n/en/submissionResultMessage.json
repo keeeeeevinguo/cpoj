@@ -1,0 +1,13 @@
+{
+  "cpojApp": {
+    "SubmissionResultMessage": {
+      "null": "",
+      "NA": "NA",
+      "PASS": "PASS",
+      "NOT_PASS": "NOT_PASS",
+      "INVALID_SUBMISSION": "INVALID_SUBMISSION",
+      "COMPILE_TIME_ERROR": "COMPILE_TIME_ERROR",
+      "INTERNAL_ERROR": "INTERNAL_ERROR"
+    }
+  }
+}
