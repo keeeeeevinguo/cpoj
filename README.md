@@ -1,5 +1,7 @@
 # cpoj
 
+A full-stack web application built with JHipster that allows users to submit and evaluate code against predefined test cases in real-time. This platform automates the process of code submission, compilation, and judging, providing instant feedback to users.
+
 This application was generated using JHipster 7.6.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v7.6.0](https://www.jhipster.tech/documentation-archive/v7.6.0).
 
 ## Project Structure
