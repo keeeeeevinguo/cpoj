@@ -1,0 +1,112 @@
+entity Problem {
+    name String required unique minlength(3) maxlength(20)
+   title String required unique minlength(5) maxlength(500)
+   description String required minlength(10) maxlength(100000)
+
+   createdBy String required
+   createdDate Instant
+   lastModifiedBy String required
+   lastModifiedDate Instant
+}
+entity TestCase {
+   name String required minlength(1) maxlength(20)
+   timeLimitInMS Integer required min(10) max(10000)
+   memoryLimitInMB Integer required min(100) max(512)
+   /**
+   If a submission passes this test case, it should get this weight percentage of the total points
+   If a submission passes all the test case of a problem, it should get 100% of the total points
+   */
+   weightPercentage Integer required min(1) max(100)
+
+   inputData TextBlob required
+   outputData TextBlob required
+
+   createdBy String required
+   createdDate Instant
+   lastModifiedBy String required
+   lastModifiedDate Instant
+}
+entity Submission {
+   name String required minlength(1) maxlength(20)
+   programmingLanguage ProgrammingLanguage
+   code String required minlength(1) maxlength(100000)
+   overallResultStatus SubmissionResultStatus required
+   overallResultMessage SubmissionResultMessage required
+   overallResultMessageDetail String minlength(0) maxlength(1000)
+   overallResultTries Integer required min(0) max(5)
+   overallResultScorePercentage Integer required min(0) max(100)
+
+   createdBy String required
+   createdDate Instant
+   lastModifiedBy String required
+   lastModifiedDate Instant
+}
+entity SubmissionTestCaseResult {
+    name String required minlength(1) maxlength(20)
+   resultMessage TestCaseResultMessage required
+   resultMessageDetail String minlength(0) maxlength(1000)
+   elapsedTimeInMS Integer required min(0) max(10000)
+
+   createdBy String required
+   createdDate Instant
+   lastModifiedBy String required
+   lastModifiedDate Instant
+}
+// enum ProgrammingLanguage {
+//   JAVA ("Java"),
+//   PYTHON3 ("Python 3"),
+//   PYTHON2 ("Python 2"),
+//   C_PLUS_PLUS ("C++"),
+//   C("C")
+// }
+// enum SubmissionResultStatus {
+//   WAIT ("Waiting to be judged"),
+//   JUDGING ("Judging"),
+//   JUDGED ("Judged")
+// }
+// enum SubmissionResultMessage {
+//   NA ("NA"),
+//   PASS ("Pass"),
+//   NOT_PASS ("Not Pass")
+//   INVALID_SUBMISSION ("Invalid Submission")
+//   COMPILE_TIME_ERROR ("Compile Time Error")
+//   INTERNAL_ERROR ("Internal Error")
+// }
+// enum TestCaseResultMessage {
+//   NA ("NA"),
+//   PASS ("Pass"),
+//   WRONG_ANSWER ("Wrong Answer")
+//   TLE ("Time Limit Exceeded")
+//   RUNTIME_ERROR ("Runtime Error")
+// }
+enum ProgrammingLanguage {
+    JAVA, PYTHON3, PYTHON2, C_PLUS_PLUS, C
+}
+enum SubmissionResultStatus {
+    WAIT, JUDGING, JUDGED
+}
+enum SubmissionResultMessage {
+    NA, PASS, NOT_PASS
+ INVALID_SUBMISSION
+ COMPILE_TIME_ERROR
+ INTERNAL_ERROR
+}
+enum TestCaseResultMessage {
+    NA, PASS, WRONG_ANSWER
+ TLE
+ RUNTIME_ERROR
+}
+relationship OneToMany {
+    Problem{testCase(name)} to TestCase{problem}
+  Submission{submissionTestCaseResult(name)} to SubmissionTestCaseResult{submission}
+}
+relationship ManyToOne {
+    // TestCase{problem(name)} to Problem
+    // SubmissionTestCaseResult{submission(name)} to Submission
+    Submission{problem(name)} to Problem
+}
+
+filter Problem, Submission
+paginate * with pagination
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
